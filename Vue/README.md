@@ -10,20 +10,37 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Project Setup
+## First 
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### second （You must enter the Vue file）
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### The database is using MySQL Workbench 8.0 CE. After installation, change your MySQL configuration in server/index.js
 
 ```sh
-npm run build
+// 创建 MySQL 连接池
+const pool = mysql.createPool({
+  host: 'localhost', // 数据库主机
+  user: 'root', // 数据库用户名
+  port: 3308, // MySQL 端口
+  password: 'Manatee004', // 数据库密码
+  database: 'student_plan_dis', // 数据库名称
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+});
+```
+
+### thirdly, run the server under the 'seven' file 
+
+```sh
+cd server
+node index.js
 ```
